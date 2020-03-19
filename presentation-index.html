@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Présentation</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="jquery.pageslide.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <a href="accueil-index.html"><img src="img/bandeau.jpg" alt="bandeau"></a>
+            <a class="open" href="#js-menu">Menu</a>
+        </header>
+                
+            <nav id="js-menu" class="menu">
+            <h1>Menu principal</h1>
+                <ul >
+                    <li><a href="accueil-index.html" title="retour accueil">Accueil</a></li>
+                    <li><a href="presentation-index.html" title="presentation">Présentation</a></li>
+                    <li id="planetes"><a href="#">Les planètes</a>
+                        <ul class="sousMenu">
+                            <li><a href="planetes_interieures-index.html">Planètes intérieures</a></li>
+                            <li><a href="planetes_geantes-index.html">Planètes géantes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact-index.html" title="contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        <!-- MAIN -->
+        <main id="principalPres">
+
+            <aside id="asideGauchePres">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quia minima rerum saepe, 
+                    eveniet consequuntur vel eaque cum est doloribus neque distinctio voluptatem, 
+                    alias ullam reprehenderit, enim sit. Ullam, eius.
+                </p>
+            </aside>
+
+            <section id="sectionDroitePres">
+                <h3>Ci-dessous une vidéo de présentation du système solaire</h3>
+
+                <picture id="videoPresentation">
+                <p>
+                    <iframe  height="315" src="https://www.youtube.com/embed/Ps6bygxRohw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                </p>
+                </picture>
+
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <a href="Accueil-index.html" title="retour accueil">Accueil |</a>
+            <a href="mentions_legales.html"  title="mentions légales">Mentions légales |</a>
+            <a href="contact.html"  title="contact">Contact</a>
+        </footer>
+
+
+    </div> <!-- fin div wrapper  -->
+
+    <script type="text/javascript" src="js/jquery.pageslide.min.js"></script>
+	<!--on ne met pas le script dans le head car le plug-in crée une div-->
+	<script type="text/javascript">
+		$(".open").pageslide();
+	</script>
+</body>
+
+</html>

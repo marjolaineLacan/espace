@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Contact</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="jquery.pageslide.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <a href="accueil-index.html"><img src="img/bandeau.jpg" alt="bandeau"></a>
+            <a class="open" href="#js-menu">Menu</a>
+        </header>
+                
+            <nav id="js-menu" class="menu">
+            <h1>Menu principal</h1>
+                <ul >
+                    <li><a href="accueil-index.html" title="retour accueil">Accueil</a></li>
+                    <li><a href="presentation-index.html" title="presentation">Présentation</a></li>
+                    <li id="planetes"><a href="#">Les planètes</a>
+                        <ul class="sousMenu">
+                            <li><a href="planetes_interieures-index.html" >Planètes intérieures</a></li>
+                            <li><a href="planetes_geantes-index.html" >Planètes géantes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact-index.html" title="contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        <!-- MAIN -->
+        <main id="principalContact">
+
+            <aside id="asideGaucheContact">
+                <h3>Contactez-nous à l'aide du formulaire ci-dessous</h3>
+
+
+                <form method="" action="" enctype="multipart/form-data">
+                    <ul>
+                        <li>
+                            <label for="nom">Nom* : </label> <input type="text" id="nom" required  name="nom"
+                                placeholder="Votre nom ici" />
+                        </li>
+
+                        <li>
+                            <label for="prenom">Prénom : </label> <input type="text" id="prenom" name="prenom"
+                                placeholder="Votre prénom ici" />
+                        </li>
+
+                        <li>
+                            <legend>Sexe:</legend>
+                            <input type="radio" id="homme" name="homme" /> <label for="homme">Homme</label>
+                            <input type="radio" id="femme" name="femme" /><label for="femme">Femme</label>
+                            <input type="radio" id="extraterreste" name="extraterreste" /> <label
+                                for="extraterreste">extraterreste</label>
+                        </li>
+
+                        <li>
+                            <label for="tel">Tél : </label> <input type="tel" id="tel" name="tel"
+                                placeholder="0123456789" />
+                        </li>
+
+                        <li>
+                            <label for="email">Email* : </label> <input type="email" id="email" name="email"
+                                placeholder="xxx@yyy.zz" required/>
+                        </li>
+
+                        <li>
+                            <label for="date">Date : </label> <input type="date" id="date" name="date"
+                                placeholder="jj/mm/aaaa" />
+                        </li>
+
+                        <li>
+                            <label for="pj">Pièce jointe :</label> <input type="file" id="pj" name="pj" />
+                        </li>
+
+                        <li>
+                            <label for="message"> Votre message :</label>
+                            <textarea cols="40" rows="10" id="message" name="message">Bonjour, votre message</textarea>
+                        </li>
+
+                        <li id="bouton">
+                            <label></label>
+                            <input type="reset" id="reset"/> <input type="submit" id="valider" value="Valider">
+                        </li>
+                    </ul>
+                </form>
+                <br />
+
+
+            </aside>
+
+            <section id="sectionDroiteContact">
+
+                <div id="adresse">
+                    <h3>Contactez-nous:</h3>
+                    <p >Tél: 01 23 45 67 89<br />
+                    rue du cosmos, 44049 Triton
+                    </p>
+                </div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11122.984633444654!2d-1.5644825579487984!3d47.216615154266606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eeaf57abea75%3A0x92f9172550dde009!2sKosmos+-+Digital+for+education!5e0!3m2!1sfr!2sfr!4v1558377453444!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <!-- plan -->
+
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <a href="Accueil-index.html" title="retour accueil">Accueil |</a>
+            <a href="mentions_legales.html"  title="mentions légales">Mentions légales |</a>
+            <a href="contact-index.html"  title="contact">Contact</a>
+        </footer>
+
+
+    </div> <!-- fin div wrapper  -->
+
+    <script type="text/javascript" src="js/jquery.pageslide.min.js"></script>
+	<!--on ne met pas le script dans le head car le plug-in crée une div-->
+	<script type="text/javascript">
+		$(".open").pageslide();
+	</script>
+</body>
+
+</html>

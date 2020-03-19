@@ -1,0 +1,731 @@
+html{
+	font-size:100%;
+}
+
+body {
+    font-family: "audiowide", sans-serif;
+    color: white;
+    margin: 0;
+    background-color: black;
+    height:100%;
+}
+
+#wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+header, main{
+    width: 100%;
+}
+
+header img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+/* *********************** Menu ********************** */
+
+.open {
+    display: block;
+    width: 40px;
+    height: 30px;
+    background: url(img/menu.png) center no-repeat #999;
+    border-radius: 8px;
+    text-indent: -999em;
+}
+
+.menu > h1{
+    margin-bottom: 30px;
+}
+
+nav.menu {
+    display: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu li {
+    float: left;
+    width: 20%;
+    position: relative;
+    margin-top: 0.5em;
+    margin-right: 4%;
+    margin-bottom: 1em;
+}
+
+.menu a, .sousMenu a {
+    display: block;
+    min-width: 15%;
+    width: 100%;
+    
+    background: -webkit-gradient(linear, right top, left top, from(#555), to(#111));
+    
+    background: linear-gradient(to left, #555, #111);
+    border: 1px solid white;
+    border-radius: 2em 2em 0 2em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.sousMenu {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+ul .sousMenu {
+    padding: 5px;
+}
+
+.sousMenu li {
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.menu li:hover .sousMenu {
+    display: block;
+}
+
+#pageslide .menu ul{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+#pageslide .menu li{
+	float:none;
+	display:block;
+	width:100%;
+	color:#FFF;
+	border-bottom:1px solid #000;
+	-webkit-box-shadow:0 1px 0 #555;
+	        box-shadow:0 1px 0 #555;
+	border-radius:0;
+	background:none;
+	text-align:left;
+}
+
+#pageslide .menu ul li:nth-child(3){
+    display: none;
+}
+
+
+/* ****************** footer ******************* */
+footer {
+    padding: 10px;
+    margin: 0;
+    background-image: url(img/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* **************** page accueil ********************* */
+#principal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+/* cosmonaute */
+#cosmonaute {
+    position: absolute;
+    margin-left: -10%;
+    margin-top: 30%;
+    -webkit-animation: bouge 8s linear infinite;
+    animation: bouge 8s linear infinite;
+    display: none;
+}
+
+#cosmonaute p {
+    display: none;
+}
+
+#cosmonaute:hover p {
+    display: block;
+}
+
+#cosmonaute:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    /* rotation stoppe*/
+}
+
+@-webkit-keyframes bouge {
+    0% {
+        -webkit-transform: rotate(0deg) scale(0.2);
+        transform: rotate(0deg) scale(0.2);
+        margin-left: -10%;
+        margin-top: 30%;
+    }
+
+    50% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+        margin-left: 80%;
+        margin-top: 10%;
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg) scale(0.2);
+        transform: rotate(0deg) scale(0.2);
+        margin-left: -10%;
+        margin-top: 30%;
+    }
+}
+
+/* page accueil aside */
+#asideGauche {
+    margin: 3%;
+    width: 30%;
+    display: none;
+}
+
+#asideGauche ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#asideGauche>ul>li>h3{
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    background-color: gray;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#asideGauche>ul>li p {
+    display: none;
+}
+
+/*  page accueil section droite  */
+#sectionDroite {
+    width: 100%;
+    margin-bottom: 2em;  
+}
+
+#sectionDroite img, #pictureAccueil{
+    width: 100%;
+}
+
+#troisImages {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+#troisImages figure, #troisImages figure figcaption
+figure#soleil img, figure#comete img, figure#galaxie img {
+    width: 100%;
+}
+
+/* survol rotation */
+#troisImages figure:hover {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+figure#soleil, figure#comete, figure#galaxie {
+    width: 100%;
+    margin: 0 auto;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+figure figcaption {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* *************** page Presentation **************** */
+
+
+#asideGauchePres{
+    /* width: 30%; */
+    text-align: center;
+    margin: 2em auto;
+}
+
+picture #videoPresentation {
+    width: 100%;
+}
+
+#sectionDroitePres {
+    margin: 2em auto;
+    width: 80%;
+    border: 2px solid grey;
+    -webkit-box-shadow: 3px 3px 3px 3px grey;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+
+#videoPresentation p{
+    width: 100%;
+    text-align: center;
+}
+
+
+/* **************** FORMULAIRE CONTACT *********************/
+#principalContact{
+    position: relative;
+    width: 100%;
+}
+
+#asideGaucheContact, form, legend {
+    width: 100%;
+}
+
+#sectionDroiteContact {
+    width: 100%;
+    text-align: center;
+}
+
+input#nom,input#prenom,input#tel,input#email,input#date,input#pj,input#message {
+    width: 90%;
+    height: 20px;
+    border-radius: 5px;
+}
+
+textarea {
+    vertical-align: top;
+    border-radius: 5px;
+    width: 90%;
+}
+
+li #bouton {
+    width: 90px;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+}
+
+fieldset {
+    border-radius: 8px;
+    border: 3px solid #001500;
+}
+
+form ul {
+    list-style-type: none;
+}
+
+form li {
+    margin-bottom: 1em;
+}
+
+input:focus, textarea:focus {
+    background-color: pink;
+    color: blue;
+}
+
+/* ******************** MAP ***************** */
+
+#sectionDroiteContact iframe {
+    width: 90%;
+}
+
+/* **************** VERSION DESKTOP ****************** */
+
+@media only screen and (min-width:600px) {
+    .menu {
+        display: block;
+    }
+
+    .menu > h1{
+        display: none;
+    }
+
+    .open {
+        display: none;
+    }
+
+    nav.menu {
+        display: block;
+        /* position: relative;
+        z-index: 1000; */
+    }
+
+/* page accueil ***********************************/
+    #principal{
+        margin: 25px;
+    }
+    
+    #cosmonaute, #asideGauche{
+        display: block;
+    }
+
+    #sectionDroite {
+        width: 55%;
+        margin: 3%;
+        border: 2px solid grey;
+        -webkit-box-shadow: 3px 3px 3px 3px grey;
+        box-shadow: 3px 3px 3px 3px grey;
+    }
+
+/* page présentation ****************************/
+    #principalPres{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 25px;
+        position: relative;
+        width: 100%;
+    }
+
+    #asideGauchePres{
+        width: 30%;
+    }
+
+    #sectionDroitePres{
+        width: 55%;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+
+/* page planetes geantes  *********************************/
+
+    #planetesG figure:hover {
+        -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+    }
+
+
+    #principalG {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #planetesG {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        position: relative;
+
+    }
+
+    .planetes {
+        width: 25%;
+        cursor: pointer;
+        margin-right: 30px;
+        text-align: center;
+    }
+
+    .planetes figcaption, #jupiter img,#saturne img {
+        width: 100%;
+    }
+
+    figcaption {
+        text-align: center;
+        padding-top: 2em;
+    }
+
+    .planetes p{
+        display: none;
+    }
+
+    /* apparition fenêtre planete geante */
+    #carre {
+        position: absolute;
+        width: 350px;
+        height: 100px;
+        background-image: url(img/ciel.jpg);
+        border-radius: 15px;
+        border: 3px solid white;
+        left: 300px;
+        top: 10%;
+        padding: 200px;
+        display: none;
+        z-index: 2000;
+    }
+
+    #croix {
+        position: absolute;
+        color: white;
+        text-align: center;
+        border: 1px solid white;
+        width: 40px;
+        height: 40px;
+        background-image: url(img/ciel.jpg);
+        font-size: 2em;
+        margin-left: 500px;
+        margin-top: -400px;
+        border-radius: 5px;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    #medaillon img{
+        position: absolute;
+        text-align: center;
+        width: 170px;
+        height: 150px;
+        left: 20px;
+        top: 1em;
+    }
+
+    #nomPlaneteG {
+        position: absolute;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+        font-size: 1.5em;
+        background-image: url(img/ciel.jpg);
+        left: 300px;
+        top: 1em;
+    }
+
+
+/*  planetes interieures */
+
+    #principalInt {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    #asideGeucheInt {
+        width: 15%;
+    }
+
+    #asideGaucheInt ul {
+        margin: 0;
+        padding-left: 20%;
+        list-style-type: none;
+        width: 28%;
+    }
+
+    #asideGaucheInt>ul>li {
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px;
+        background-color: gray;
+    }
+
+    #sectionDroiteInt {
+        width: 85%;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative; /*animation*/
+    }
+
+    #soleilInt {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("img/soleil.png") no-repeat center center;
+    }
+
+    .planeteInt{
+        cursor: pointer;
+    }
+
+    @-webkit-keyframes tourne {
+        from {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+        }
+    
+        to {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+        }
+    }
+
+    @keyframes tourne {
+        from {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+        }
+    
+        to {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+        }
+    }
+
+    #mercure, #venus, #terre, #mars{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    #mercure{
+        -webkit-animation: 8s linear infinite;
+                animation: 8s linear infinite;
+    }
+
+    #venus{
+        -webkit-animation: 10s linear infinite;
+                animation: 10s linear infinite;
+    }
+
+    #terre{
+        -webkit-animation: 12s linear infinite;
+                animation: 12s linear infinite;
+    }
+
+    #mars{
+        -webkit-animation: 14s linear infinite;
+                animation: 14s linear infinite;
+    }
+
+/* mercure */
+    #mercure div{
+        position: absolute;
+        left: 7em;
+        height: 100%;
+        width: 8%;
+        background: url("img/mercure.png") no-repeat center left;
+    }
+
+/* venus */
+    #venus div{
+        position: absolute;
+        left: 3em;
+        height: 100%;
+        width: 8%;
+        background: url("img/venus.png") no-repeat center left;    
+    }
+
+/* terre */
+    #terre div{
+        position: absolute;
+        left: -1em;
+        height: 100%;
+        width: 8%;
+        background: url("img/terre.png") no-repeat center left;
+    }
+
+/* mars */
+    #mars div{
+        position: absolute;
+        height: 100%;
+        left: -5em;
+        width: 8%;
+        background: url("img/mars.png") no-repeat center left;
+    }
+
+
+
+/* page contact ********************************/
+
+    #principalContact{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
+
+    #asideGaucheContact {
+        width: 55%;
+    }
+
+    input#nom,input#prenom,input#tel,input#email,input#date,input#pj,input#message {
+        width: 250px;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    textarea {
+        vertical-align: top;
+        border-radius: 5px;
+        width: 250px;
+    }
+
+    #sectionDroiteContact {
+        width: 45%;
+        text-align: center;
+    }
+
+    #sectionDroiteContact iframe {
+        width: 90%;
+        margin-left: 600px;
+    }
+
+    #sectionDroiteContact div {
+        -webkit-animation: adresse 3s linear;
+                animation: adresse 3s linear;
+    }
+    
+    /*  Apparition adresse */
+    @-webkit-keyframes adresse {
+        0% {
+            -webkit-transform: rotate(0deg) scale(0.2);
+            transform: rotate(0deg) scale(0.2);
+            opacity: 0;
+        }
+    
+        50%{
+            -webkit-transform: rotate(180deg) scale(0.6);
+            transform: rotate(180deg) scale(0.6);
+            opacity: 0.5;
+        }
+    
+        100% {
+            -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* map */
+
+    #sectionDroiteContact #adresse:hover+iframe {
+        margin-left: 0px;
+        -webkit-transition-delay: 1s;
+        -webkit-transition-duration: 3s;
+}
+
+}

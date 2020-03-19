@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Planètes intérieures</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="jquery.pageslide.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <a href="accueil-index.html"><img src="img/bandeau.jpg" alt="bandeau"></a>
+            <a class="open" href="#js-menu">Menu</a>
+        </header>
+                
+            <nav id="js-menu" class="menu">
+            <h1>Menu principal</h1>
+                <ul >
+                    <li><a href="accueil-index.html" title="retour accueil">Accueil</a></li>
+                    <li><a href="presentation-index.html" title="presentation">Présentation</a></li>
+                    <li id="planetes"><a href="#">Les planètes</a>
+                        <ul class="sousMenu">
+                            <li><a href="planetes_interieures-index.html">Planètes intérieures</a></li>
+                            <li><a href="planetes_geantes-index.html" >Planètes géantes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact-index.html" title="contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        <!-- MAIN -->
+        <main id="principalInt">
+
+            <aside id="asideGaucheInt">
+                <h3>Cliquez sur les boutons pour déclencher la rotation</h3>
+
+                <ul>
+                    <li id="boutonMercure" class="planeteInt">Mercure</li>
+                    <li id="boutonVenus" class="planeteInt">Vénus</li>
+                    <li id="boutonTerre" class="planeteInt">Terre</li>
+                    <li id="boutonMars" class="planeteInt">Mars</li>
+                    <li id="boutonAll" class="planeteInt">Animation</li>
+                    <br />
+                    <li id="boutonStop" class="planeteInt">Reset</li>
+                </ul>
+                
+                <br />
+            </aside>
+
+            <section id="sectionDroiteInt">
+
+                <div id="mercure" class="stop">
+                    <div></div>
+                </div>
+                <div id="venus" class="stop">
+                    <div></div>
+                </div>
+                <div id="terre" class="stop">
+                    <div></div>
+                </div>
+                <div id="mars" class="stop">
+                    <div></div>
+                </div>
+
+
+                <div id="soleilInt"></div>
+
+
+                <!-- <div class="autresPlanetes">
+                    <picture id="mercure">
+                        <img src="img/mercure.png" alt="mercure" />
+                    </picture>
+
+                    <picture id="venus">
+                        <img src="img/venus.png" alt="venus" />
+                    </picture>
+
+                    <picture id="terre">
+                        <img src="img/terre.png" alt="terre" />
+                    </picture>
+
+                    <picture id="mars">
+                        <img src="img/mars.png" alt="mars" />
+                    </picture> -->
+
+
+                </div>
+
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <a href="Accueil-index.html" title="retour accueil">Accueil |</a>
+            <a href="mentions_legales.html"  title="mentions légales">Mentions légales |</a>
+            <a href="contact-index.html" title="contact">Contact</a>
+        </footer>
+
+
+    </div> <!-- fin div wrapper  -->
+
+    <script type="text/javascript" src="js/jquery.pageslide.min.js"></script>
+	<!--on ne met pas le script dans le head car le plug-in crée une div-->
+	<script type="text/javascript">
+		$(".open").pageslide();
+	</script>
+</body>
+
+</html>
